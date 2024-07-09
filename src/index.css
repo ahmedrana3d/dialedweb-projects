@@ -1,0 +1,327 @@
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+@font-face {
+  font-family: "Horizon";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/newhorizon.otf?v=1718489174696") format("opentype");
+}
+@font-face {
+  font-family: "CircularXXWeb-Book";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/CircularXXWeb-Book.woff2?v=1718489171289") format("woff2");
+}
+@font-face {
+  font-family: "Helvetic";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/HelveticaNeueBold.otf?v=1718489173897") format("opentype");
+}
+@font-face {
+  font-family: "apline";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/gt-apline.otf?v=1718489172128") format("opentype");
+}
+
+@font-face {
+  font-family: "Opti";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/OPTIForquetOldsIta-Sup.otf?v=1718489175476") format("opentype");
+}
+
+@font-face {
+  font-family: "Opti";
+  src: url("https://cdn.glitch.global/b75b22a8-446a-45ca-bd37-9e63f6cd7c5d/OPTIForquetOldsIta-Sup.otf?v=1718489175476") format("opentype");
+}
+
+@font-face {
+  font-family: "SFPRO";
+  src: url("/fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+}
+
+.fontOpti {
+  font-family: "Opti";
+}
+
+.fontHorizon {
+  font-family: Horizon;
+}
+
+html,
+body #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.test {
+  font-family: Horizon;
+  background: linear-gradient(#33354b, #33354b) left no-repeat, #ffffff;
+  background-size: 0% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s ease-in-out;
+}
+
+.test:hover {
+  background-size: 100% 100%;
+}
+
+.neonText {
+  color: #8c52ff;
+  font-family: "Merienda", cursive;
+  text-shadow: 0px 0px 10px #fff, 0px 0px 10px #2b00ff;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #2b00ff;
+  }
+  to {
+    text-shadow: 0px 0px 30px #fff, 0px 0px 30px #2900f7;
+  }
+}
+
+
+
+.headline-orange {
+  line-height: 80%;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: auto;
+  overflow: hidden;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    120deg,
+    #0d0b38,
+    #3e3690,
+    #e1e1e1,
+    #aaa3ff,
+    #0d0b38,
+    #cdcbe1,
+    #545358
+  );
+  background-size: 400% 400%;
+  animation: backgroundChange 8s linear infinite;
+  display: inline;
+  font-size: inherit;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.menuButton {
+  /* position: relative; */
+  width: 6rem;
+  height: 2rem;
+  background-color: #aaa3ff;
+  border-color: #aaa3ff;
+  border-radius: 1rem;
+  border: none;
+  /* padding: 6px 16px; */
+  text-transform: uppercase;
+  line-height: 1.33;
+  /* display: inline-flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  font-family: CircularXXWeb-Book;
+  font-weight: 900;
+  transition: 0.3s linear;
+}
+
+.menuButton:hover {
+  box-shadow: 0px 0px 13px 5px rgba(207, 200, 200, 0.678);
+  font-size: 1.1rem;
+}
+
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.socialButton {
+  transition: 0.3s linear;
+  padding: 4px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.socialButton:hover {
+  background-color: #00f0ff;
+  color: #000000;
+  box-shadow: 0px 0px 13px 5px rgba(66, 205, 239, 0.678);
+}
+
+.enterButton {
+  transition: 0.3s linear;
+  border-radius: 1rem;
+}
+.enterButton:hover {
+  background-color: #00f0ff;
+  color: #000000;
+  box-shadow: 0px 0px 13px 5px rgba(66, 205, 239, 0.678);
+  /* padding: 1px; */
+}
+
+
+
+
+
+.chronicle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  line-height: 1;
+  border-radius: 0.7rem;
+  padding: 0.815rem 1.232rem;
+  cursor: pointer;
+  border: none;
+  background: #00f0ff;
+  transition: background 0.4s linear;
+  will-change: background;
+}
+
+.chronicle-button:hover {
+  background: #00f0ff;
+  box-shadow: 0px 0px 13px 5px rgba(66, 205, 239, 0.678);
+
+}
+
+.chronicle-button:hover .chronicle-span:nth-of-type(1) em {
+  opacity: 0;
+  transform: rotateX(90deg) scaleX(0.9) translate3d(0, -10px, 0);
+}
+
+.chronicle-button:hover .chronicle-span:nth-of-type(2) em {
+  opacity: 1;
+  transform: rotateX(0deg) scaleX(1) translateZ(0);
+  transition: transform 0.75s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 0.35s linear 0.3s;
+}
+
+.chronicle-span {
+  position: relative;
+  display: block;
+  perspective: 108px;
+}
+
+.chronicle-span:nth-of-type(2) {
+  position: absolute;
+}
+
+em {
+  font-style: normal;
+  display: inline-block;
+  font-size: 1.125rem;
+  color: black;
+  font-weight: 600;
+  will-change: transform, opacity, transition;
+  transition: transform 0.55s cubic-bezier(0.645, 0.045, 0.355, 1),
+    opacity 0.35s linear 0.2s;
+}
+
+.chronicle-span:nth-of-type(1) em {
+  transform-origin: top;
+}
+
+.chronicle-span:nth-of-type(2) em {
+  opacity: 0;
+  transform: rotateX(-90deg) scaleX(0.9) translate3d(0, 10px, 0);
+  transform-origin: bottom;
+}
+
+
+.touch-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  line-height: 1;
+  border-radius: 0.7rem;
+  padding: 0.815rem 1.232rem;
+  cursor: pointer;
+  border: none;
+  background: #00f0ff;
+  transition: background 0.4s linear;
+  font-family: Arial, Helvetica, sans-serif;
+  will-change: background;
+}
+
+.touch-button:hover {
+  background: #00F0FF;
+  box-shadow: 0px 0px 13px 5px rgba(66, 205, 239, 0.678);
+}
+
+.touch-span {
+  position: relative;
+  display: block;
+  perspective: 108px;
+}
+
+.touch-span:nth-of-type(1) em,
+.touch-span:nth-of-type(2) em {
+  font-style: normal;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 600;
+  transition: transform 0.55s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.35s linear 0.2s;
+}
+
+.touch-span:nth-of-type(1) em {
+  transform: translateY(0%);
+}
+
+.touch-span:nth-of-type(2) em {
+  transform: translateY(200%);
+}
+
+.touch-button:hover .touch-span:nth-of-type(1) em {
+  transform: translateY(-200%);
+}
+
+.touch-button:hover .touch-span:nth-of-type(2) em {
+  transform: translateY(0%);
+}
+
+
+
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c /* Background color */
+} 
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: #313131; /* Color of the handle */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #050505; /* Color on hover */
+}
